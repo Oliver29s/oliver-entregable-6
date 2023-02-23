@@ -1,11 +1,14 @@
 import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
+import { Routes,  Route } from 'react-router-dom'
 import './App.css'
+import Home from './assets/pages/Home'
 import {setAllProductsThunk} from './assets/store/slice/products.slice'
+
 
 function App() {
  
- const {products} = useSelector(state => state)
+ 
  const dispatch =  useDispatch()
 
  useEffect(() => {
@@ -13,10 +16,13 @@ function App() {
  }, [])
  
 
- console.log(products)
+
+ 
   return (
     <div className="App">
-      
+      <Routes>
+        <Route path='/' element={<Home/>} />
+      </Routes>
     </div>
   )
 }
