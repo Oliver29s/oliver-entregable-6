@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import CardProduct from '../components/CardProduct'
 
-const Home = () => {
+const HomePage = () => {
     const {products} = useSelector(state => state)
     console.log(products)
   return (
@@ -22,4 +22,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
