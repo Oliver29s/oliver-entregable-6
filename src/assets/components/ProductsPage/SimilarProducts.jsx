@@ -14,9 +14,9 @@ const SimilarProducts = ({ categories, productId }) => {
   console.log(filterProducts);
 
   return (
-    <div>
+    <div className="info__discover">
       <h2>Discover Similar Products</h2>
-      <div>
+      <div className="info__similar">
         {filterProducts?.map((prod) => {
           if (prod.id !== productId) {
            return <CardProduct key={prod.id} product={prod} />;

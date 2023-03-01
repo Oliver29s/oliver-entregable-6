@@ -18,7 +18,7 @@ const ProductPage = () => {
   }, [id])
   
   return (
-    <div>
+    <div className='info__main'>
         <ProductInfo product={product}/>
         <SimilarProducts categories={product?.categoryId}
         productId ={product?.id}

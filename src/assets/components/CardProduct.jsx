@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './shared/styles/cardProducts.css'
 
 const CardProduct = ({product}) => { 
 
@@ -8,18 +9,18 @@ const CardProduct = ({product}) => {
     navigate(`/product/${product.id}`)
   }
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="card__contain">
         <header>
           <img src={product?.images[0].url} alt="" />
         </header>
         <section>
           <header>
-            <h3>{product?.brand}</h3>
-            <h2>{product?.title}</h2>
+            <h3  className='card__ligth'>{product?.brand}</h3>
+            <h2 className='card__bold'>{product?.title}</h2>
           </header>
           <div>
-            <div>Price</div>
-            <div>{product?.price}</div>
+            <div className='card__ligth'>Price</div>
+            <div className='card__bold prices'>{product?.price}</div>
           </div>
           <button>
           <i className='bx bxs-cart-add'></i>

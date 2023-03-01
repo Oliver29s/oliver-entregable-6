@@ -1,0 +1,116 @@
+.info__main {
+  margin-top: 11vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.section__main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 1px #f85555;
+  border-radius: 0.5rem;
+}
+.div__slider {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.div__slider > img {
+  width: 80%;
+}
+
+.div__slider > button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 25px;
+  background-color: #f85555;
+  color: rgb(228, 214, 214);
+  cursor: pointer;
+}
+
+.section__main h2{
+    text-align: center;
+}
+
+.info__quantity{
+    display: flex;
+    justify-content: space-around;
+}
+.info__articleOne, .info__articleTwo{
+    width: 50%;
+    text-align: center;
+}
+
+.info__articleOne > h4, .info__articleTwo > h4{
+    color: rgb(125, 127, 127);
+}
+.info__articleOne > span{
+    font-weight: bold;
+}
+
+.info__articleOne > span::before{
+    content: '$ ';
+}
+.info__articleOne{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info__button > button{
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f85555;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.info_add{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 420px ;
+    background-color: #f85555;
+    color: aliceblue;
+    text-align: center;
+}
+
+.adds{
+    color: aliceblue;
+}
+
+.info__discover{
+    width: 100%;
+    max-width: 1204px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info__similar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}

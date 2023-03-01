@@ -1,19 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styles/header.css";
 
 const Header = () => {
   return (
-    <header>
-        <h1> <Link to='/'>Ecomerce</Link></h1>
-        <nav>
-            <ul>
-                <li><Link to='/'>Login</Link> </li>
-                <li><Link to='/'>Purchases</Link></li>
-                <li><Link to='/'>Cart</Link></li>
-            </ul>
-        </nav>
-    </header>
-  )
-}
+    <header >
+      <div className="home__header">
 
-export default Header
+      <h1>
+        {" "}
+        <Link className="home__h1" to="/">
+          E-comerce
+        </Link>
+      </h1>
+      <nav className="home__nav">
+        <ul>
+          <li>
+            <Link to="/">
+              Login
+              <i className="bx bxs-user"></i>
+            </Link>{" "}
+          </li>
+          <li>
+            <Link to="/">
+              Purchases
+              <i className="bx bxs-box"></i>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">Cart  <i className='bx bxs-cart-download'></i></Link>
+           
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

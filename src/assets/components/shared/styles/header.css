@@ -1,0 +1,53 @@
+.App > header{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+}
+
+.home__header {
+ width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home__h1  {
+  text-decoration: none;
+  color: #f85555;
+}
+
+.home__nav {
+  width: 50%;
+  max-width: 1024px;
+}
+
+.home__nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.home__nav ul li a {
+  display: flex;
+  flex-direction: column-reverse;
+  text-decoration: none;
+  align-items: center;
+  color: rgb(44, 47, 49);
+}
+.home__nav ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.bx{
+    
+    color: #f85555;
+}

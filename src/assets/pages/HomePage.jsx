@@ -6,8 +6,8 @@ const HomePage = () => {
     const {products} = useSelector(state => state)
     console.log(products)
   return (
-    <div>
-        <div>
+    
+        <div className='card__main'>
             {
                 products?.map( product =>(
                     <CardProduct 
@@ -18,7 +18,7 @@ const HomePage = () => {
                 ))
             }
         </div>
-    </div>
+    
   )
 }
 
