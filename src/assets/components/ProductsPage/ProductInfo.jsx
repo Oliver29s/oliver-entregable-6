@@ -6,15 +6,13 @@ const ProductInfo = ({ product }) => {
   const [counterTwo, setcounterTwo] = useState(0);
 
   const handleBack = () => {
-    setCounter(counterTwo + 1);
-    if (counterTwo > 2) {
-      setCounter((counterTwo = 0));
+    if (counterTwo  < 2) {
+      setcounterTwo(counterTwo + 1);
     }
   };
   const handleAdvance = () => {
-    setCounter(counterTwo - 1);
-    if (counterTwo < 0) {
-      setcounterTwo((counterTwo = 2));
+    if (counterTwo > 0) {
+      setcounterTwo(counterTwo - 1);
     }
   };
 
@@ -30,7 +28,7 @@ const ProductInfo = ({ product }) => {
       setCounter(counter - 1);
     }
   };
-
+  console.log(counterTwo);
   return (
     <section className="section__main">
       <h3>{product?.brand}</h3>
@@ -54,7 +52,7 @@ const ProductInfo = ({ product }) => {
           </div>
         </article>
       </div>
-      <button className="info_add" >
+      <button className="info_add">
         Add to cart <i className="bx bxs-cart-add adds"></i>
       </button>
       <p>{product?.description}</p>

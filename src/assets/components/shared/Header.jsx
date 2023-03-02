@@ -16,7 +16,7 @@ const Header = () => {
       <nav className="home__nav">
         <ul>
           <li>
-            <Link to="/">
+            <Link to="/user/login">
               Login
               <i className="bx bxs-user"></i>
             </Link>{" "}
