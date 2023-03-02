@@ -28,7 +28,7 @@ const ProductInfo = ({ product }) => {
       setCounter(counter - 1);
     }
   };
-  console.log(counterTwo);
+
   return (
     <section className="section__main">
       <h3>{product?.brand}</h3>
@@ -37,6 +37,8 @@ const ProductInfo = ({ product }) => {
         <img src={product?.images[counterTwo]?.url} alt="logo" />
         <button onClick={handleBack}> {">"} </button>
       </div>
+      <main className="section__mainTwo">
+
       <h2>{product?.title}</h2>
 
       <div className="info__quantity">
@@ -56,6 +58,7 @@ const ProductInfo = ({ product }) => {
         Add to cart <i className="bx bxs-cart-add adds"></i>
       </button>
       <p>{product?.description}</p>
+      </main>
     </section>
   );
 };

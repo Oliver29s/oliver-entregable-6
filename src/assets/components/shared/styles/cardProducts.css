@@ -20,10 +20,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid 1px rgb(188, 186, 186);
+
     border-radius: 0.5rem;
     padding: 0.5rem 0;
-    box-shadow: 0 0.1rem 2rem 0.2rem rgba(0,0,0,.175);
+    box-shadow: 0 0.1rem 2rem 0.2rem rgba(55, 55, 55, 0.201);
     cursor: pointer;
 }
 
@@ -85,4 +85,12 @@
 }
 .bxs-cart-add{
     font-size: 30px;
+    
+}
+
+@media (min-width: 1024px) {
+    .card__main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
 }
