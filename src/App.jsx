@@ -7,6 +7,7 @@ import HomePage from "./assets/pages/HomePage";
 import LoginPage from "./assets/pages/LoginPage";
 import ProductPage from "./assets/pages/ProductPage";
 import RegisterPage from "./assets/pages/RegisterPage";
+import { getCartThunk } from "./assets/store/slice/cart.slice";
 import { setAllProductsThunk } from "./assets/store/slice/products.slice";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   useEffect(() => {
     dispatch(setAllProductsThunk());
+    dispatch( getCartThunk())
   }, []);
 
   return (

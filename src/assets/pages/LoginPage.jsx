@@ -15,7 +15,7 @@ const LoginPage = () => {
     .post(url,data)
     .then(res => {console.log(res.data)
       setToken(res.data.token)
-    localStorage.setItem('toke', res.data.token)
+    localStorage.setItem('token', res.data.token)
     localStorage.setItem('name', `${res.data.user.firstName}  ${res.data.user.lastName}`)
     })
     .catch(err =>{ console.log(err)
