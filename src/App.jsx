@@ -1,21 +1,27 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./assets/components/shared/Header";
+import { focusBLur } from "./assets/layout/confi";
+import CartPage from "./assets/pages/CartPage";
 import HomePage from "./assets/pages/HomePage";
 import LoginPage from "./assets/pages/LoginPage";
 import ProductPage from "./assets/pages/ProductPage";
+import ProtetecRoutes from "./assets/pages/ProtetecRoutes";
 import RegisterPage from "./assets/pages/RegisterPage";
 import { getCartThunk } from "./assets/store/slice/cart.slice";
 import { setAllProductsThunk } from "./assets/store/slice/products.slice";
 
 function App() {
+  focusBLur();
   const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state);
+  console.log(cart);
 
   useEffect(() => {
     dispatch(setAllProductsThunk());
-    dispatch( getCartThunk())
+    dispatch(getCartThunk());
   }, []);
 
   return (
@@ -25,8 +31,11 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/user">
-        <Route path="login" element={<LoginPage />} />
-        <Route path="register" element={<RegisterPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="register" element={<RegisterPage />} />
+        </Route>
+        <Route element={<ProtetecRoutes/>}>
+    <Route  path="/cart" element={<CartPage/>}/>
         </Route>
       </Routes>
     </div>

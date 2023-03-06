@@ -28,7 +28,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">Cart  <i className='bx bxs-cart-download'></i></Link>
+            <Link to="/cart">Cart  <i className='bx bxs-cart-download'></i></Link>
            
           </li>
         </ul>

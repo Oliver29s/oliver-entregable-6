@@ -4,7 +4,6 @@ import CardProduct from '../components/CardProduct'
 
 const HomePage = () => {
     const {products} = useSelector(state => state)
-    console.log(products)
   return (
     
         <div className='card__main'>
