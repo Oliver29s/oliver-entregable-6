@@ -6,6 +6,7 @@
   align-items: center;
   position: fixed;
   background-color: white;
+  box-shadow: 3rem rgba(0,0,0,.175);
 }
 
 .home__header {
@@ -14,7 +15,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
@@ -33,6 +33,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+
 }
 
 .home__nav ul li a {
@@ -41,6 +42,9 @@
   text-decoration: none;
   align-items: center;
   color: rgb(44, 47, 49);
+  border-right: 1px solid gray ;
+  border-left: 1px solid gray ;
+  padding: 0.5rem;
 }
 .home__nav ul li {
   list-style: none;

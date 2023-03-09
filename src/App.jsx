@@ -9,6 +9,7 @@ import HomePage from "./assets/pages/HomePage";
 import LoginPage from "./assets/pages/LoginPage";
 import ProductPage from "./assets/pages/ProductPage";
 import ProtetecRoutes from "./assets/pages/ProtetecRoutes";
+import PurchasesPage from "./assets/pages/PurchasesPage";
 import RegisterPage from "./assets/pages/RegisterPage";
 import { getCartThunk } from "./assets/store/slice/cart.slice";
 import { setAllProductsThunk } from "./assets/store/slice/products.slice";
@@ -17,7 +18,7 @@ function App() {
   focusBLur();
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state);
-  console.log(cart);
+
 
   useEffect(() => {
     dispatch(setAllProductsThunk());
@@ -36,6 +37,7 @@ function App() {
         </Route>
         <Route element={<ProtetecRoutes />}>
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/purchases" element={<PurchasesPage/>}/>
         </Route>
       </Routes>
     </div>

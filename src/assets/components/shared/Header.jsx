@@ -22,7 +22,7 @@ const Header = () => {
             </Link>{" "}
           </li>
           <li>
-            <Link to="/">
+            <Link to="/purchases">
               Purchases
               <i className="bx bxs-box"></i>
             </Link>
