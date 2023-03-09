@@ -34,8 +34,8 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
         </Route>
-        <Route element={<ProtetecRoutes/>}>
-    <Route  path="/cart" element={<CartPage/>}/>
+        <Route element={<ProtetecRoutes />}>
+          <Route path="/cart" element={<CartPage />} />
         </Route>
       </Routes>
     </div>

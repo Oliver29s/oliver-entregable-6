@@ -1,10 +1,13 @@
 import axios from "axios";
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import confi from "../layout/confi";
+import { getCartThunk } from "../store/slice/cart.slice";
 import "./shared/styles/cardProducts.css";
 
 const CardProduct = ({ product }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`/product/${product.id}`);
@@ -20,7 +23,10 @@ const CardProduct = ({ product }) => {
     };
     axios
       .post(url, data, confi)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        dispatch(getCartThunk())
+        console.log(res.data);
+      })
       .catch((err) => console.log(err.res));
   };
 
