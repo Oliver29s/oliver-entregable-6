@@ -11,7 +11,9 @@
     margin-right: auto;
     margin-top: 11vh;
 }
-
+.form__search{
+    grid-column: 2 / 3;
+}
 .card__contain{
     width: 100%;
     max-width: 350px;

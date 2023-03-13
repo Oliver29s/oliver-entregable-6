@@ -4,14 +4,7 @@ const confi = {
     }
   }
 export const focusBLur = () =>{
-
-    window.addEventListener('focus', () =>{
-        document.title = 'E-commerce | Academlo'
-    })
-
-    window.addEventListener('blur', () =>{
-        document.title =  '¡Vuelve! ¡No te Vayas!' 
-    })
-
+    window.addEventListener('focus', () => document.title = 'E-commerce | Academlo')
+    window.addEventListener('blur', () =>document.title =  '¡Vuelve! ¡No te Vayas!')
 }
   export default confi
