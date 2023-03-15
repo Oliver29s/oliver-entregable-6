@@ -13,6 +13,7 @@ const HomePage = () => {
   const [categorys, setcategorys] = useState();
   const [inputPrice, setinputPrice] = useState({ from: 0, to: Infinity });
   const dispatch = useDispatch();
+  const [filterSec, setfilterSec] = useState('')
   useEffect(() => {
     const url = "https://e-commerce-api-v2.academlo.tech/api/v1/categories";
     axios
@@ -43,6 +44,9 @@ const HomePage = () => {
       to: +e.target.to.value.trim(),
     });
   };
+
+  const filterSection =() => setfilterSec('show')
+  const handleShow =() => setfilterSec('')
   return (
     <>
       <div className="home__search">
@@ -50,12 +54,13 @@ const HomePage = () => {
         <button>
           <i className="bx bx-search-alt"></i>
         </button>
+        <button onClick={filterSection}>Filters</button>
       </div>
       <div className="card__main">
         <form onSubmit={submit} className="form__search"></form>
-        <div className="filter__modal">
+        <div className={`filter__modal ${filterSec}`}>
           <form onSubmit={onSubmit} className="form__price">
-            <button className="button__filter x">X</button>
+            <button className="button__filter x" onClick={handleShow}>X</button>
             <h3 className="form__h3">
               Price <i className="bx bxs-chevron-down"></i>
             </h3>
