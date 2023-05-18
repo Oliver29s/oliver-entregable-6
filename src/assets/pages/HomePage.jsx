@@ -50,14 +50,17 @@ const HomePage = () => {
   return (
     <>
       <div className="home__search">
+      <form onSubmit={submit} className="form__search">
         <input type="text" id="search" />
         <button>
           <i className="bx bx-search-alt"></i>
         </button>
         <button onClick={filterSection}>Filters</button>
+        </form>
       </div>
+      
       <div className="card__main">
-        <form onSubmit={submit} className="form__search"></form>
+       
         <div className={`filter__modal ${filterSec}`}>
           <form onSubmit={onSubmit} className="form__price">
             <button className="button__filter x" onClick={handleShow}>X</button>

@@ -13,6 +13,10 @@
 }
 .form__search{
     grid-column: 2 / 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card__contain{
     width: 100%;
