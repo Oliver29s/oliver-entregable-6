@@ -26,7 +26,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     border-radius: 0.5rem;
     padding: 0.5rem 0;
     box-shadow: 0 0.1rem 2rem 0.2rem rgba(55, 55, 55, 0.201);
@@ -50,13 +49,16 @@
     width: 100%;
     object-fit: contain;
 }
+.position_relative{
+    display: flex;
+    justify-content: space-between;
+}
 
 .card__contain > section{
     width: 100%;
     padding: 0 1rem;
     display: grid;
     gap: 1rem;
-    position: relative;
 
 }
 
@@ -77,8 +79,7 @@
     color: rgb(157, 154, 150);
 }
 
-.card__contain > section >button{
-    position: absolute;
+.position_relative >button{
     right: 29px;
     bottom: 0;
     padding: 0.5rem;

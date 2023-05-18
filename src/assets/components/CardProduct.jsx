@@ -24,7 +24,7 @@ const CardProduct = ({ product }) => {
     axios
       .post(url, data, confi)
       .then((res) => {
-        dispatch(getCartThunk())
+        dispatch(getCartThunk());
         console.log(res.data);
       })
       .catch((err) => console.log(err.res));
@@ -40,13 +40,15 @@ const CardProduct = ({ product }) => {
           <h3 className="card__ligth">{product?.brand}</h3>
           <h2 className="card__bold">{product?.title}</h2>
         </header>
-        <div>
-          <div className="card__ligth">Price</div>
-          <div className="card__bold prices">{product?.price}</div>
+        <div className="position_relative">
+          <div>
+            <div className="card__ligth">Price</div>
+            <div className="card__bold prices">{product?.price}</div>
+          </div>
+          <button onClick={handleClickTwo}>
+            <i className="bx bxs-cart-add"></i>
+          </button>
         </div>
-        <button onClick={handleClickTwo}>
-          <i className="bx bxs-cart-add"></i>
-        </button>
       </section>
     </div>
   );
